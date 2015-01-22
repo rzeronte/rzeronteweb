@@ -19,5 +19,12 @@
 App::uses('AppController', 'Controller');
 
 class UsersAppController extends AppController {
-
+    /*
+     *  Definimos la relacion para el detalle de usuario
+     */
+    public $hasOne = array(
+        'Profile' => array(
+            'className' => 'Profile'
+        )
+    );
 }

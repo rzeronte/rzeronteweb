@@ -8,7 +8,7 @@
 				'id' => 'LoginForm'));
         ?>
         <?php echo $this->Session->flash(); ?>
-          <h2 class="title-small">please sign in...</h2>
+          <h2 class="title-small">login</h2>
           <br/>
 
             <?php
@@ -33,9 +33,7 @@
             </label>
           </div>
 
-		<?php
-		echo $this->Form->hidden('User.return_to', array('value' => $return_to));
-        ?>
+		<?php echo $this->Form->hidden('User.return_to', array('value' => $return_to)); ?>
 
           <?= $this->Form->button(__('sign in'), array('class' => 'btn btn-lg btn-primary btn-block')) ?>
           <?= $this->Form->end() ?>
@@ -43,9 +41,11 @@
         <br/>
 		<?php echo '<p class="text-center">' . $this->Html->link('I forgot my password', array('action' => 'reset_password')) . '</p>'; ?>
     </div>
+
+    <div class="col-md-4">
+    </div>
+
   </div>
 
-  <div class="col-md-4">
-  </div>
 
 <?php //echo $this->element('Users.Users/sidebar'); ?>

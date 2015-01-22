@@ -188,7 +188,7 @@ pre code {
 
 .promo {
   background: #17baef;
-  padding-top: 90px;
+  padding-top: 68px;
 }
 .promo .title {
   font-size: 98px;
@@ -206,7 +206,7 @@ pre code {
   color: white;
 }
 
-.promo .title .highlight {
+.highlight {
   color: #eebf3f;
 }
 .intro {

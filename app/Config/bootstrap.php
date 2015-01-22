@@ -126,3 +126,7 @@ Configure::write('Users.roles', array(
 CakePlugin::load('Users', array(
 	'routes' => true
 ));
+
+// Cambiamos la configuración de envío del DCUsers
+Configure::write('Users.emailConfig', 'smtp');
+//Configure::write('Users.allowRegistration', false);

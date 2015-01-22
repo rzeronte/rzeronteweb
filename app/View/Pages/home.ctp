@@ -5,7 +5,10 @@
 
     <?php else: ?>
         <h2 class="title">rZ<span class="highlight">eronte</span></h2>
-        <p class="intro">technological survivor... but here i am. <br/>only for private access. no register avaible.</p>
+        <p class="intro">
+            web developer and technological mercenary
+            <br/><br/>
+            only for private access <span class="oscuro">no register avaible</span></p>
         <div class="btns">
                 <?php echo $this->Html->link('login', array('controller' => 'users','action' => 'login'), array('class' => 'btn btn-cta-primary')); ?>
         </div>

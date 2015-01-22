@@ -293,6 +293,26 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function edit() {
+		$userId = $this->Auth->user('id');
+		try {
+			$result = $this->{$this->modelClass}->edit($userId, $this->request->data);
+			if ($result === true) {
+				$this->Session->setFlash(__d('users', 'User saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				unset($result[$this->modelClass]['password']);
+				$this->request->data = $result;
+			}
+		} catch (OutOfBoundsException $e) {
+			$this->Session->setFlash($e->getMessage());
+			$this->redirect(array('action' => 'index'));
+		}
+
+		if (empty($this->request->data)) {
+			$this->request->data = $this->{$this->modelClass}->read(null, $userId);
+			unset($this->request->data[$this->modelClass]['password']);
+		}
+		$this->set('roles', Configure::read('Users.roles'));
 	}
 
 /**

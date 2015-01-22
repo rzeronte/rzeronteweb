@@ -2,7 +2,7 @@
     <!--<section id="opensource" class="about section">-->
         <div class="container">
             <h2 class="title-small text-center oscuro">opensource</h2>
-            <p class="intro text-center">here you can find my opensource projects<br/><br/> Read file README.md for more details</p>
+            <p class="intro text-center">here you can find my opensource projects<br/><br/> Read file <span class="highlight">README.md</span> for more details</p>
             <div class="row">
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="content">
